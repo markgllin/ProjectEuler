@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "showOutput": "always",
+    "command": "sh",
+    "args": ["-c"],
+    "echoCommand": true,
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "build",
+            "isBuildCommand": true,
+            "args": ["g++ -std=c++11 -g power_digit_sum.cpp -o answer.out"]
+        },
+        {
+            "taskName": "run",
+            "isTestCommand": true,
+            "args":["./answer.out"]
+        }
+    ]
+}
